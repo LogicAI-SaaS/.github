@@ -55,7 +55,7 @@ depuis le web, le desktop et le mobile.
 | Dépôt | Accès | Description |
 |---|---|---|
 | [**logicai-instance**](https://github.com/LogicAI-SaaS/logicai-instance) | 🌐 public | Instance LogicAI **open-source**, auto-hébergeable via Docker (`docker run logicai/logicai`). |
-| [**sdk**](https://github.com/LogicAI-SaaS/sdk) | 🌐 public | `@logicai/sdk` — client **TypeScript** officiel de l'API. |
+| [**sdk**](https://github.com/LogicAI-SaaS/sdk) | 🌐 public | `logicai-sdk` — client **TypeScript** officiel de l'API. |
 | **platform** | 🔒 privé | Monorepo de la plateforme SaaS (API, web, desktop, mobile, code partagé). |
 
 ---
@@ -71,7 +71,7 @@ docker run -d --name logicai -p 5678:3000 logicai/logicai:latest
 
 **Vous voulez automatiser via du code ?**
 ```bash
-npm install @logicai/sdk
+npm install logicai-sdk
 ```
 👉 [Documentation du SDK](https://github.com/LogicAI-SaaS/sdk)
 
