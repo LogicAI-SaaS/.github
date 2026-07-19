@@ -36,6 +36,25 @@ depuis le web, le desktop et le mobile.
 
 ---
 
+## 🧩 Deux façons d'utiliser une instance
+
+| Mode | Où ça tourne | Pour qui |
+|---|---|---|
+| 🖥️ **Local** | Chez vous, via **Docker** — 100 % sous votre contrôle, données locales. | Ceux qui veulent l'auto-hébergement et l'open-source. |
+| ☁️ **Cloud** | Hébergé par LogicAI, **synchronisé sur toutes vos plateformes et appareils** (web, desktop, mobile). | Ceux qui veulent le zéro-configuration et l'accès partout. |
+
+- **Local** → open-source, à récupérer et lancer depuis [**logicai-instance**](https://github.com/LogicAI-SaaS/logicai-instance) :
+  ```bash
+  docker run -d --name logicai -p 5678:3000 logicai/logicai:latest
+  ```
+- **Cloud** → provisionné en un clic depuis la plateforme LogicAI, avec auto-login SSO,
+  gestion multi-instances et collaboration temps réel, **synchronisés sur tous vos appareils**.
+
+> Les deux modes partagent la **même** image d'instance : vous pouvez commencer en
+> local puis passer au cloud (ou l'inverse) sans changer d'outil.
+
+---
+
 ## 🏗 Architecture
 
 ```
@@ -44,8 +63,8 @@ depuis le web, le desktop et le mobile.
             ▼
    API LogicAI (Express + Prisma + PostgreSQL)
             │  orchestration Docker
-            ▼
-   Instances LogicAI (conteneurs open-source)
+            ├──►  ☁️  Cloud   : instances hébergées, synchro multi-appareils
+            └──►  🖥️  Local   : instance Docker open-source, auto-hébergée
 ```
 
 ---
